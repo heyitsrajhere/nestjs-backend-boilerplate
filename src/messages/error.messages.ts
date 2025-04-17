@@ -1,0 +1,16 @@
+export const ErrorMessages = {
+  badRequest: 'Bad Request',
+  unauthorized: 'Unauthorized',
+  emailAlreadyExists: 'Email already exists',
+  invalidCredentials: 'Invalid credentials',
+  internalServerError: 'Internal Server Error',
+  errorWhileRegister: 'Error during user registration:',
+  errorWhileLogin: 'Error during user login:',
+  passwordMinLength: 'Password must be at least 6 characters long',
+  invalidEmailFormat: 'Invalid email format',
+  nameMustBeString: 'Name must be a string',
+  nameMinLength: 'Name must be at least 3 characters long',
+  nameRequired: 'Name is required',
+  emailRequired: 'Email is required',
+  passwordRequired: 'Password is required',
+};
