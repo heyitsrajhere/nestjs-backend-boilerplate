@@ -1,6 +1,6 @@
 import { Body, Controller, Post, UseGuards, Request } from '@nestjs/common';
 import { AuthService } from './auth.service';
-import { LoginDto, RegisterDto } from './dto';
+import { LoginDto, LoginResponseDto, RegisterDto } from './dto';
 import {
   ApiBearerAuth,
   ApiOperation,
@@ -35,12 +35,12 @@ export class AuthController {
   @ApiResponse({
     status: 200,
     description: SuccessMessages.loginSuccessfully,
-    type: LoginDto,
+    type: LoginResponseDto,
   })
   @ApiResponse({ status: 401, description: ErrorMessages.unauthorized })
   async login(
     @Body() body: LoginDto,
-  ): Promise<ResponseInterface<{ accessToken: string }>> {
+  ): Promise<ResponseInterface<LoginResponseDto>> {
     return this.authService.login(body);
   }
 

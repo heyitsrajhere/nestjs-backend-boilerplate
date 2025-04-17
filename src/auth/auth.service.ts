@@ -6,7 +6,7 @@ import {
 } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 import { UserRepository } from 'src/Database/Repository';
-import { LoginDto, RegisterDto } from './dto';
+import { LoginDto, LoginResponseDto, RegisterDto } from './dto';
 import * as bcrypt from 'bcrypt';
 import { ResponseInterface } from 'src/interface';
 import { User } from 'src/Database/Entity';
@@ -57,9 +57,7 @@ export class AuthService {
    * @throws UnauthorizedException if the credentials are invalid.
    * @throws InternalServerErrorException for unexpected errors during login.
    */
-  async login(
-    dto: LoginDto,
-  ): Promise<ResponseInterface<{ accessToken: string }>> {
+  async login(dto: LoginDto): Promise<ResponseInterface<LoginResponseDto>> {
     try {
       const { email, password } = dto;
 
