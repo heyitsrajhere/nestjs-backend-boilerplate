@@ -20,8 +20,8 @@ A scalable and secure backend boilerplate using **NestJS**, **TypeORM**, **Postg
 ## 📦 Installation
 
 ```bash
-git clone https://github.com/your-username/nestjs-api-starter.git
-cd nestjs-api-starter
+git clone https://github.com/heyitsrajhere/nestjs-backend-boilerplate
+cd nest-project
 npm install
 ```
 
@@ -32,6 +32,7 @@ npm run start:dev
 
 # production
 npm run build
+
 npm run start:prod
 
 ---
